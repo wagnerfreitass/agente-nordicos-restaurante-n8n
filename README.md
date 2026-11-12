@@ -9,12 +9,9 @@ Workflow de n8n para pizzarias que reúne atendimento via WhatsApp, Instagram e 
 - **Entrega e cobrança.** Durante o pedido, o agente pode consultar o CEP, usar o Mapbox para calcular a entrega e acionar uma rota interna para enviar o pedido. A integração com o Asaas cria a cobrança e registra o link de pagamento.
 - **Follow-up.** Um gatilho periódico consulta os atendimentos pendentes no Supabase. O agente usa o histórico para decidir se envia uma mensagem pelo canal de origem.
 
-## Configuração no n8n
+## Sobre a versão pública
 
-1. Importe o [workflow em JSON](workflows/agente-ia-restaurante.json). Os nós comunitários usados no arquivo são `@splainez/n8n-nodes-phonenumber-parser` e `n8n-nodes-evolution-api`.
-2. Configure as credenciais dos serviços usados, as tabelas no Supabase e a pasta monitorada no Google Drive. Revise os nós **Fixed Credentials** e **Fixed Credentials1** para os canais de atendimento.
-3. Em **Apontamentos**, informe o token do Mapbox e as coordenadas do restaurante. Ajuste o cardápio, os preços e as regras de entrega do exemplo.
-4. Confira a URL base do n8n e os caminhos dos webhooks internos. Teste com um contato de demonstração e configure o ambiente de testes do Asaas antes de simular a cobrança.
+Este repositório documenta a automação de atendimento e delivery utilizada em produção por um restaurante cliente. O [workflow publicado](workflows/agente-ia-restaurante.json) apresenta a lógica dos agentes e das integrações. Para proteger o ambiente do cliente, as credenciais de acesso, as coordenadas usadas no cálculo da entrega e os endereços internos dos webhooks foram omitidos ou substituídos por valores de exemplo.
 
 ## 👨‍💻 Autor
 
